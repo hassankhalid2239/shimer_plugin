@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:shimer_plugin/animation.dart';
 import 'package:shimer_plugin/shimmer_effect.dart';
+import 'shimmer_effect.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin{
 
   @override
   Widget build(BuildContext context) {
@@ -16,24 +24,28 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        physics: const NeverScrollableScrollPhysics(),
+        physics: NeverScrollableScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 10,),
-            buildContainer(),
-            const SizedBox(height: 10,),
-            buildContainerPost(),
-            buildContainer(),
-            const SizedBox(height: 10,),
-
-
+            // const SizedBox(height: 10,),
+            // buildContainer(),
+            // const SizedBox(height: 10,),
+            // buildContainerPost(),
+            // buildContainer(),
+            // const SizedBox(height: 10,),
+            
+        
+        
+        
+        
+        
           ],
         ),
       ),
     );
   }
-
 
   Container buildContainerPost() {
     return Container(
@@ -165,6 +177,7 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
   Container buildContainer() {
     return Container(
       color: Colors.black12,
