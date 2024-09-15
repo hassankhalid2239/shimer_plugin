@@ -42,15 +42,15 @@
 
 import 'package:flutter/material.dart';
 
-class FadeAnimation extends StatefulWidget {
+class FadeShim extends StatefulWidget {
   final Widget child;
-  FadeAnimation({super.key, required this.child});
+  const FadeShim({super.key, required this.child});
 
   @override
-  State<FadeAnimation> createState() => _FadeAnimationState();
+  State<FadeShim> createState() => _FadeShimState();
 }
 
-class _FadeAnimationState extends State<FadeAnimation> with SingleTickerProviderStateMixin{
+class _FadeShimState extends State<FadeShim> with SingleTickerProviderStateMixin{
   late final AnimationController _controller;
   late final Animation<double> _animation;
   @override
