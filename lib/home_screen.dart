@@ -20,10 +20,13 @@ class _HomeScreenState extends State<HomeScreen>
       appBar: AppBar(
         foregroundColor: Colors.white,
         backgroundColor: Colors.redAccent,
-        title: const Text(
-          'Shimmer Effect',
-          style: TextStyle(color: Colors.white),
-        ),
+        title:  Obx((){
+          return Text(
+            _stateController.animation.value==true?
+            'Shimmer Effect':'Fade Shimmer',
+            style: const TextStyle(color: Colors.white),
+          );
+        }),
         actions: [
           PopupMenuButton(
             padding: EdgeInsets.zero,
